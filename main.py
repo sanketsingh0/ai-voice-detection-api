@@ -13,7 +13,6 @@ class VoiceRequest(BaseModel):
     language: str
     audio_format: str
     audio_base64: Optional[str] = None
-    audio_file_url: Optional[str] = None
 
 
 @app.post("/detect-voice")
@@ -50,3 +49,4 @@ def detect_voice(
         "confidence": 0.82,
         "explanation": "Natural duration and energy variations indicate human voice."
     }
+
